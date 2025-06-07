@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "f9ec3b3b-c907-49a7-bfc3-03cc32ba0805",
+		"name": "POC_SSE_SPRINGBOOT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12894687"
+	},
+	"item": [
+		{
+			"name": "SSE_NOTIFICATION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trigger1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notifications/sendMSG1?msg=test&type=done",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notifications",
+						"sendMSG1"
+					],
+					"query": [
+						{
+							"key": "msg",
+							"value": "test"
+						},
+						{
+							"key": "type",
+							"value": "done"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trigger2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notifications/sendMSG2?msg=hi raj&type=error",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notifications",
+						"sendMSG2"
+					],
+					"query": [
+						{
+							"key": "msg",
+							"value": "hi raj"
+						},
+						{
+							"key": "type",
+							"value": "error"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trigger3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notifications/sendMSG3?msg=Broadcasting message&type=success",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notifications",
+						"sendMSG3"
+					],
+					"query": [
+						{
+							"key": "msg",
+							"value": "Broadcasting message"
+						},
+						{
+							"key": "type",
+							"value": "success"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
